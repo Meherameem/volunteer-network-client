@@ -58,9 +58,6 @@ const Home = () => {
             <InputBase className={styles.search} placeholder="Search…"/>
             <Button style={{margin:'10px',borderRadius:'10px'}} variant="contained" color="primary">Search</Button>
           </div>
-          {/* <div>
-            {tasks.map(task => <HomeCard key={task._id} task={task}></HomeCard>)}
-          </div> */}
           <div>
             <Grid container spacing={10}
               style={{padding: '40px'}}>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
@@ -8,6 +8,7 @@ import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import { Fab, Button } from "@material-ui/core";
 import {Link} from 'react-router-dom';
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -64,9 +65,19 @@ const Admin = () => {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
 
+    const [user,setUser] = useState([]);
+    useEffect(() => {
+      fetch('https://pure-shore-46823.herokuapp.com/users')
+      .then(res => res.json())
+      .then(data =>{
+        setUser(data);
+      })
+    },[]);
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
   };
+
     return (
         <div>
           <Link to="/home"><img style={{height:'10%', width:'10%',marginLeft:'30px',marginTop:'10px',marginBottom:'5px'}} src={require('../../images/Icon.png')} alt="Icon"></img></Link>
@@ -86,6 +97,20 @@ const Admin = () => {
                 <TabPanel value={value} index={0}>
                    <div>
                        <h3>Volunteer Register List</h3>
+                       <table>
+                        <tr>
+                          <th>Name</th>
+                          <th>Email</th>
+                          
+                        </tr>
+                        {
+                          user.map(use => <tr>
+                            <td>{use.name}</td>
+                            <td>{use.email}</td>
+                            
+                          </tr>
+                          )}
+                      </table>
                    </div>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
@@ -126,6 +151,6 @@ const Admin = () => {
                 </div>
         </div>
     );
-};
+  };
 
 export default Admin;
