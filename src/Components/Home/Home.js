@@ -27,7 +27,7 @@ const Home = () => {
     const classes = useStyles();
     const [tasks,setTasks] = useState([]);
     useEffect(() => {
-      fetch('http://localhost:5000/tasks')
+      fetch('https://pure-shore-46823.herokuapp.com/tasks')
       .then(res => res.json())
       .then(data =>{
         setTasks(data);

@@ -91,7 +91,7 @@ const Admin = () => {
                 <TabPanel value={value} index={1}>
                     <div>
                         <h3>Add Event</h3>
-                          <form action="http://localhost:5000/addevent" method="post" style={{marginLeft:'10px'}} className={classes.root} noValidate autoComplete="off">
+                          <form action="https://pure-shore-46823.herokuapp.com/addevent" method="post" style={{marginLeft:'10px'}} className={classes.root} noValidate autoComplete="off">
                           <TextField name="name" style={{marginRight:'50px'}} id="standard-basic" label="Event Name" /><br></br>
                           <TextField name="description" style={{marginRight:'50px'}} id="standard-basic" label="Description" /><br></br>
                           <TextField name="date"  style={{marginRight:'50px'}}

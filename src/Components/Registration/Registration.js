@@ -22,7 +22,7 @@ const Registration = () => {
     return (
         <div>
             <Link to="/home"><img style={{height:'10%', width:'10%',marginLeft:'600px',marginTop:'10px',marginBottom:'5px'}} src={require('../../images/Icon.png')} alt="Icon"></img></Link>
-            <form action="http://localhost:5000/users" method="post" style={{marginLeft:'500px', border:'1px solid darkgrey',width:'300px',padding:'15px',borderRadius:'10px'}} className={classes.root} noValidate autoComplete="off">
+            <form action="https://pure-shore-46823.herokuapp.com/users" method="post" style={{marginLeft:'500px', border:'1px solid darkgrey',width:'300px',padding:'15px',borderRadius:'10px'}} className={classes.root} noValidate autoComplete="off">
                 <h3>Register As A Volunteer</h3>
             <TextField id="standard-basic" label="Name" value={loggedInUser.name} name="name" /><br></br>
             <TextField id="standard-basic" label="Email" value={loggedInUser.email} name="email" /><br></br>
