@@ -1,0 +1,15 @@
+.nav{
+    text-decoration: none;
+    color: white;
+}
+.caption{
+    text-align: center;
+}
+.search{
+    border: 1px solid darkgrey;
+    border-radius:10px;
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    
+}

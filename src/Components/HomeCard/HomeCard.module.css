@@ -1,0 +1,35 @@
+.zoom {
+    padding: 10px;
+    transition: transform .2s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+  
+  }
+  
+  .box{
+       position: relative;
+       padding-left: 5px;
+  
+   }
+  
+   .box .text{
+          background-color: rgba(0, 0, 0, 0.5);
+          color: white;
+           position: absolute;
+           z-index: 999;
+           margin: 0 auto;
+           left: 0;
+           right: 0;
+           top: 60%; /* Adjust this value to move the positioned div up and down */
+           text-align: left;
+           width: 80%; /* Set the width of the positioned div */
+           font-weight: 800;
+       }
+  
